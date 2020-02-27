@@ -1,4 +1,5 @@
 import Introduction from '../components/Introduction.jsx';
+import SSNWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
 
 const formConfig = {
   title: 'Step 1',
@@ -13,7 +14,7 @@ const formConfig = {
   defaultDefinitions: {},
   chapters: {
     firstChapter: {
-      title: 'First Chapter',
+      title: 'Step 1',
       pages: {
         firstPage: {
           path: 'step-1',
@@ -74,15 +75,36 @@ const formConfig = {
         thirdPage: {
           path: 'step-1/third-page',
           title: 'third Page',
-          uiSchema: {},
+          uiSchema: {
+            'Social Security Number': {
+              'ui:widget': SSNWidget
+            }
+          },
           schema: {
             type: 'object',
+            required: ['Social Security Number'],
             properties: {
               'School/College Currently Attending': {
                 type: 'string'
               },
               'School Student ID# (if applicable)': {
                 type: 'string'
+              },
+              Grade: {
+                type: 'string',
+                enum: [
+                  '6th Grade',
+                  '7th Grade',
+                  '8th Grade',
+                  '9th Grade',
+                  '10th Grade',
+                  '11th Grade',
+                  '12th Grade'
+                ]
+              },
+              'Social Security Number': {
+                type: 'string',
+                pattern: '[0-9]{3}-[0-9]{2}-[0-9]{4}$'
               }
             }
           }
