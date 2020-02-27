@@ -50,12 +50,41 @@ const formConfig = {
           }
         },
         secondPage: {
-          path: 'first-chapter/second-page',
+          path: 'step-1/second-page',
           title: 'Second Page',
           uiSchema: {},
           schema: {
             type: 'object',
-            properties: {}
+            properties: {
+              'Student E-Mail': {
+                type: 'string'
+              },
+              'Parent E-Mail': {
+                type: 'string'
+              },
+              'Student Phone Number': {
+                type: 'string'
+              },
+              'Parent Phone Number': {
+                type: 'string'
+              }
+            }
+          }
+        },
+        thirdPage: {
+          path: 'step-1/third-page',
+          title: 'third Page',
+          uiSchema: {},
+          schema: {
+            type: 'object',
+            properties: {
+              'School/College Currently Attending': {
+                type: 'string'
+              },
+              'School Student ID# (if applicable)': {
+                type: 'string'
+              }
+            }
           }
         }
       }
