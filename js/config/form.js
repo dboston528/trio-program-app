@@ -8,9 +8,9 @@ const formConfig = {
   urlPrefix: '/',
   trackingPrefix: 'form-',
   transformForSubmit: '',
-  submitUrl: '',
+  submitUrl: 'mongodb://localhost:27017/trio',
   introduction: Introduction,
-  confirmation: '',
+  confirmation: 'Thanks for submitting the application',
   defaultDefinitions: {},
   chapters: {
     firstChapter: {
