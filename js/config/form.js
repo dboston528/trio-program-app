@@ -2,9 +2,9 @@ import Introduction from '../components/Introduction.jsx';
 import SSNWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
 
 const formConfig = {
-  title: 'Step 1',
-  subTitle: 'Student Information',
-  formId: '',
+  title: 'Trio Application',
+  subTitle: 'Family Centered Educational Agency',
+  formId: '1234',
   urlPrefix: '/',
   trackingPrefix: 'form-',
   transformForSubmit: '',

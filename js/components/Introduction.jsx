@@ -18,9 +18,8 @@ class Introduction extends React.Component {
   render() {
     return (
       <div className="schemaform-intro">
-      
         <FormTitle title="Welcome to The Trio Programs Application" />
-        <p>Get started on the application.</p>
+        <p>Get started on the application!</p>
         <ProgressButton
           onButtonClick={this.startForm}
           buttonText="Start application"
