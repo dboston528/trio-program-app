@@ -112,8 +112,35 @@ const formConfig = {
       }
     },
     secondChapter: {
-      title: 'Second Chapter',
-      pages: {}
+      title: 'Step 2',
+      pages: {
+        firstPage: {
+          path: 'step-2',
+          title: 'Step 2',
+          uiSchema: {},
+          schema: {
+            type: 'object',
+            properties: {
+              'Last Name': { type: 'string' },
+              'First Name': { type: 'string' },
+              street: {
+                type: 'string'
+              },
+              city: {
+                type: 'string'
+              },
+              State: {
+                type: 'string',
+                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
+              },
+              zip: {
+                type: 'string',
+                pattern: '^[0-9]{5,9}$'
+              }
+            }
+          }
+        }
+      }
     }
   }
 };
