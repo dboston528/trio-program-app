@@ -1,6 +1,5 @@
 import Introduction from '../components/Introduction.jsx';
-import SSNWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
-
+import SSNWidget from 'us-forms-system/lib/js/widgets/SSNWidget';
 const formConfig = {
   title: 'Trio Application',
   subTitle: 'Family Centered Educational Agency',
@@ -76,13 +75,18 @@ const formConfig = {
           path: 'step-1/third-page',
           title: 'third Page',
           uiSchema: {
-            'Social Security Number': {
-              'ui:widget': SSNWidget
+            ssn: {
+              'ui:widget': SSNWidget,
+              'ui:title': 'Social Security number',
+              'ui:errorMessages': {
+                required: 'Please enter your SSN',
+                pattern: 'Please enter a valid 9 digit SSN (dashes not allowed)'
+              }
             }
           },
           schema: {
             type: 'object',
-            required: ['Social Security Number'],
+            required: ['ssn'],
             properties: {
               'School/College Currently Attending': {
                 type: 'string'
@@ -102,9 +106,9 @@ const formConfig = {
                   '12th Grade'
                 ]
               },
-              'Social Security Number': {
-                type: 'string',
-                pattern: '[0-9]{3}-[0-9]{2}-[0-9]{4}$'
+              ssn: {
+                type: 'string'
+                // pattern: '^[0-9]{9}$'
               }
             }
           }
@@ -148,9 +152,95 @@ const formConfig = {
           schema: {
             type: 'object',
             properties: {
-              'How do you identify?': {
+              Gender: {
                 type: 'string',
                 enum: ['Male', 'Female']
+              },
+              Birthdate: { type: 'string' },
+              Age: { type: 'string' },
+              'Graduation Year': { type: 'string' }
+            }
+          }
+        },
+        twoThirdPage: {
+          path: 'step2-page3',
+          title: 'step 2 page 3',
+          uiSchema: {
+            'Do you have an IEP (Individualized Educational Plan) or RTI (Response To Intervention) on file with the school/district?': {
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'yes',
+                  no: 'no'
+                }
+              }
+            },
+            'Are you currently participating in any TRiO programs?': {
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'yes',
+                  no: 'no'
+                }
+              }
+            },
+            'If you answered yes, please select the names of the program(s)': {
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  'upward bound': 'Upward Bound',
+                  '': 'no'
+                }
+              }
+            },
+            upwardBound: {
+              'ui:title': 'Upward Bound'
+            },
+            trioPrograms: {
+              'ui:title':
+                'If you answered yes, please select the names of the program(s)',
+              'ui:description': 'You may check more than one.',
+              upwardBound: {
+                'ui:title': 'Upward Bound'
+              },
+              ubms: {
+                'ui:title': 'Upward Bound Math & Science'
+              },
+              vub: {
+                'ui:title': 'Veterans Upward Bound'
+              },
+              eoc: {
+                'ui:title': 'Educational Oppurtunity Centers'
+              },
+              gu: {
+                'ui:title': 'Gear UP'
+              },
+              ts: {
+                'ui:title': 'Talent Search'
+              }
+            }
+          },
+          schema: {
+            type: 'object',
+            properties: {
+              'Do you have an IEP (Individualized Educational Plan) or RTI (Response To Intervention) on file with the school/district?': {
+                type: 'string',
+                enum: ['yes', 'no']
+              },
+              'Are you currently participating in any TRiO programs?': {
+                type: 'string',
+                enum: ['yes', 'no']
+              },
+              trioPrograms: {
+                type: 'object',
+                properties: {
+                  upwardBound: { type: 'boolean' },
+                  ubms: { type: 'boolean' },
+                  vub: { type: 'boolean' },
+                  eoc: { type: 'boolean' },
+                  gu: { type: 'boolean' },
+                  ts: { type: 'boolean' }
+                }
               }
             }
           }
