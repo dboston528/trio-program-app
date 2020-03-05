@@ -121,7 +121,37 @@ const formConfig = {
           schema: {
             type: 'object',
             properties: {
-              'Demographic Info': { type: 'string' }
+              // 'Which catagories best describe you?'
+              Hispanic: { type: 'boolean' },
+              'Black of African American': { type: 'boolean' },
+              'American Indian/Alaskan Native': { type: 'boolean' },
+              White: { type: 'boolean' },
+              Asian: { type: 'boolean' },
+              'Native Hawaiian or Pacific Islander': { type: 'boolean' }
+            }
+          }
+        },
+        twoSecondPage: {
+          path: 'step-2-page2',
+          title: 'step 2 page 2',
+          uiSchema: {
+            'How do you identify?': {
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  male: 'Male',
+                  female: 'Female'
+                }
+              }
+            }
+          },
+          schema: {
+            type: 'object',
+            properties: {
+              'How do you identify?': {
+                type: 'string',
+                enum: ['Male', 'Female']
+              }
             }
           }
         }
