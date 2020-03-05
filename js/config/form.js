@@ -114,7 +114,7 @@ const formConfig = {
     secondChapter: {
       title: 'Step 2',
       pages: {
-        firstPage: {
+        twofirstPage: {
           path: 'step-2',
           title: 'Step 2',
           uiSchema: {},
@@ -130,7 +130,7 @@ const formConfig = {
     thirdChapter: {
       title: 'Step 3',
       pages: {
-        firstPage: {
+        threefirstPage: {
           path: 'step-3',
           title: 'Step 3',
           uiSchema: {},
@@ -144,7 +144,7 @@ const formConfig = {
     fourthChapter: {
       title: 'Step 4',
       pages: {
-        firstPage: {
+        fourfirstPage: {
           path: 'step-4',
           title: 'Step 4',
           uiSchema: {},
@@ -158,7 +158,7 @@ const formConfig = {
     fifthChapter: {
       title: 'Step 5',
       pages: {
-        firstPage: {
+        fivefirstPage: {
           path: 'step-5',
           title: 'Step 5',
           uiSchema: {},
@@ -172,7 +172,7 @@ const formConfig = {
     sixthChapter: {
       title: 'Step 6',
       pages: {
-        firstPage: {
+        sixfirstPage: {
           path: 'step-6',
           title: 'Step 6',
           uiSchema: {},
@@ -186,7 +186,7 @@ const formConfig = {
     seventhChapter: {
       title: 'Step 7',
       pages: {
-        firstPage: {
+        sevenfirstPage: {
           path: 'step-7',
           title: 'Step 7',
           uiSchema: {},
