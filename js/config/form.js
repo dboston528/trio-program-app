@@ -121,54 +121,22 @@ const formConfig = {
           schema: {
             type: 'object',
             properties: {
-              'Last Name': { type: 'string' },
-              'First Name': { type: 'string' },
-              street: {
-                type: 'string'
-              },
-              city: {
-                type: 'string'
-              },
-              State: {
-                type: 'string',
-                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
-              },
-              zip: {
-                type: 'string',
-                pattern: '^[0-9]{5,9}$'
-              }
+              'Demographic Info': { type: 'string' }
             }
           }
         }
       }
     },
     thirdChapter: {
-      title: 'Step 2',
+      title: 'Step 3',
       pages: {
         firstPage: {
-          path: 'step-2',
-          title: 'Step 2',
+          path: 'step-3',
+          title: 'Step 3',
           uiSchema: {},
           schema: {
             type: 'object',
-            properties: {
-              'Last Name': { type: 'string' },
-              'First Name': { type: 'string' },
-              street: {
-                type: 'string'
-              },
-              city: {
-                type: 'string'
-              },
-              State: {
-                type: 'string',
-                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
-              },
-              zip: {
-                type: 'string',
-                pattern: '^[0-9]{5,9}$'
-              }
-            }
+            properties: {}
           }
         }
       }
@@ -177,29 +145,12 @@ const formConfig = {
       title: 'Step 4',
       pages: {
         firstPage: {
-          path: 'step-2',
-          title: 'Step 2',
+          path: 'step-4',
+          title: 'Step 4',
           uiSchema: {},
           schema: {
             type: 'object',
-            properties: {
-              'Last Name': { type: 'string' },
-              'First Name': { type: 'string' },
-              street: {
-                type: 'string'
-              },
-              city: {
-                type: 'string'
-              },
-              State: {
-                type: 'string',
-                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
-              },
-              zip: {
-                type: 'string',
-                pattern: '^[0-9]{5,9}$'
-              }
-            }
+            properties: {}
           }
         }
       }
@@ -208,29 +159,12 @@ const formConfig = {
       title: 'Step 5',
       pages: {
         firstPage: {
-          path: 'step-2',
-          title: 'Step 2',
+          path: 'step-5',
+          title: 'Step 5',
           uiSchema: {},
           schema: {
             type: 'object',
-            properties: {
-              'Last Name': { type: 'string' },
-              'First Name': { type: 'string' },
-              street: {
-                type: 'string'
-              },
-              city: {
-                type: 'string'
-              },
-              State: {
-                type: 'string',
-                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
-              },
-              zip: {
-                type: 'string',
-                pattern: '^[0-9]{5,9}$'
-              }
-            }
+            properties: {}
           }
         }
       }
@@ -239,60 +173,26 @@ const formConfig = {
       title: 'Step 6',
       pages: {
         firstPage: {
-          path: 'step-2',
-          title: 'Step 2',
+          path: 'step-6',
+          title: 'Step 6',
           uiSchema: {},
           schema: {
             type: 'object',
-            properties: {
-              'Last Name': { type: 'string' },
-              'First Name': { type: 'string' },
-              street: {
-                type: 'string'
-              },
-              city: {
-                type: 'string'
-              },
-              State: {
-                type: 'string',
-                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
-              },
-              zip: {
-                type: 'string',
-                pattern: '^[0-9]{5,9}$'
-              }
-            }
+            properties: {}
           }
         }
       }
     },
     seventhChapter: {
-      title: 'Step 2',
+      title: 'Step 7',
       pages: {
         firstPage: {
-          path: 'step-2',
-          title: 'Step 2',
+          path: 'step-7',
+          title: 'Step 7',
           uiSchema: {},
           schema: {
             type: 'object',
-            properties: {
-              'Last Name': { type: 'string' },
-              'First Name': { type: 'string' },
-              street: {
-                type: 'string'
-              },
-              city: {
-                type: 'string'
-              },
-              State: {
-                type: 'string',
-                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
-              },
-              zip: {
-                type: 'string',
-                pattern: '^[0-9]{5,9}$'
-              }
-            }
+            properties: {}
           }
         }
       }
