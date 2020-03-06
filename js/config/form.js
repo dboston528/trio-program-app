@@ -121,18 +121,48 @@ const formConfig = {
         twofirstPage: {
           path: 'step-2',
           title: 'Step 2',
-          uiSchema: {},
+          uiSchema: {
+            race: {
+              'ui:title':
+                'Are you White, Black or African-American, American Indian or Alaskan Native, Asian, Native Hawaiian or other Pacific Islander, or some other race?',
+              hsp: {
+                'ui:title': 'Hispanic'
+              },
+              blk: {
+                'ui:title': 'Black or African-American'
+              },
+              amia: {
+                'ui:title': 'American Indian or Alaskan Native'
+              },
+              wht: {
+                'ui:title': 'White'
+              },
+              asn: {
+                'ui:title': 'Asian'
+              },
+              nhp: {
+                'ui:title': 'Native Hawiian or other Pacific Islander'
+              },
+              sor: {
+                'ui:title': 'Some other Race (Please specify)'
+              }
+            }
+          },
           schema: {
             type: 'object',
             properties: {
-              // 'Which catagories best describe you?'
-              // Check ethnicity label best practice.
-              Hispanic: { type: 'boolean' },
-              'Black of African American': { type: 'boolean' },
-              'American Indian/Alaskan Native': { type: 'boolean' },
-              White: { type: 'boolean' },
-              Asian: { type: 'boolean' },
-              'Native Hawaiian or Pacific Islander': { type: 'boolean' }
+              race: {
+                type: 'object',
+                properties: {
+                  hsp: { type: 'boolean' },
+                  blk: { type: 'boolean' },
+                  amia: { type: 'boolean' },
+                  wht: { type: 'boolean' },
+                  asn: { type: 'boolean' },
+                  nhp: { type: 'boolean' },
+                  sor: { type: 'boolean' }
+                }
+              }
             }
           }
         },
