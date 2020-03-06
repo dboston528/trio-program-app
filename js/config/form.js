@@ -32,7 +32,7 @@ const formConfig = {
               },
               State: {
                 type: 'string',
-                enum: ['AK', 'IL', 'MA', 'TX', 'WY']
+                enum: ['IL', 'TX']
               },
               zip: {
                 type: 'string',
@@ -126,6 +126,7 @@ const formConfig = {
             type: 'object',
             properties: {
               // 'Which catagories best describe you?'
+              // Check ethnicity label best practice.
               Hispanic: { type: 'boolean' },
               'Black of African American': { type: 'boolean' },
               'American Indian/Alaskan Native': { type: 'boolean' },
