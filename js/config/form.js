@@ -143,6 +143,7 @@ const formConfig = {
               nhp: {
                 'ui:title': 'Native Hawiian or other Pacific Islander'
               },
+              //Add condition here, if possible.
               sor: {
                 'ui:title': 'Some other Race (Please specify)'
               }
