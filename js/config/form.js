@@ -143,7 +143,7 @@ const formConfig = {
               nhp: {
                 'ui:title': 'Native Hawiian or other Pacific Islander'
               },
-              //Add condition here, if possible.
+              //@TODO - condition here, if possible and form field to specify.
               sor: {
                 'ui:title': 'Some other Race (Please specify)'
               }
@@ -198,7 +198,9 @@ const formConfig = {
           path: 'step2-page3',
           title: 'step 2 page 3',
           uiSchema: {
-            'Do you have an IEP (Individualized Educational Plan) or RTI (Response To Intervention) on file with the school/district?': {
+            iep: {
+              'ui:title':
+                'Do you have an IEP (Individualized Educational Plan) or RTI (Response To Intervention) on file with the school/district?',
               'ui:widget': 'radio',
               'ui:options': {
                 labels: {
@@ -255,7 +257,7 @@ const formConfig = {
           schema: {
             type: 'object',
             properties: {
-              'Do you have an IEP (Individualized Educational Plan) or RTI (Response To Intervention) on file with the school/district?': {
+              iep: {
                 type: 'string',
                 enum: ['yes', 'no']
               },
