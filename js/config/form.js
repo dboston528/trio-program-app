@@ -287,10 +287,30 @@ const formConfig = {
         threefirstPage: {
           path: 'step-3',
           title: 'Step 3',
-          uiSchema: {},
+          uiSchema: {
+            usCitizen: {
+              'ui:title': 'Are you a U.S. Citizen?',
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'Yes',
+                  no: 'No'
+                }
+              }
+            }
+          },
           schema: {
             type: 'object',
-            properties: {}
+            properties: {
+              usCitizen: {
+                type: 'string',
+                enum: ['yes', 'no']
+              },
+              noUs: {
+                type: 'string',
+                enum: ['yes', 'no']
+              }
+            }
           }
         }
       }
