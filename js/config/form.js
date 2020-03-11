@@ -297,6 +297,40 @@ const formConfig = {
                   no: 'No'
                 }
               }
+            },
+            noUs: {
+              'ui:title':
+                'If you are not a U.S. Cititzen, are you a permanent resident?',
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'Yes',
+                  no: 'No'
+                }
+              }
+            },
+            prNumber: {
+              'ui:title': 'Enter Permant Resident Alien Number'
+            },
+            fosterCare: {
+              'ui:title': 'Are you in foster care?',
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'Yes',
+                  no: 'No'
+                }
+              }
+            },
+            homeless: {
+              'ui:title': 'Are you homeless',
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'Yes',
+                  no: 'No'
+                }
+              }
             }
           },
           schema: {
@@ -307,6 +341,17 @@ const formConfig = {
                 enum: ['yes', 'no']
               },
               noUs: {
+                type: 'string',
+                enum: ['yes', 'no']
+              },
+              prNumber: {
+                type: 'string'
+              },
+              fosterCare: {
+                type: 'string',
+                enum: ['yes', 'no']
+              },
+              homeless: {
                 type: 'string',
                 enum: ['yes', 'no']
               }
