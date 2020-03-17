@@ -360,16 +360,85 @@ const formConfig = {
         }
       }
     },
+    //Make dynamcic & add conditional logic
     fourthChapter: {
       title: 'Step 4',
       pages: {
         fourfirstPage: {
           path: 'step-4',
           title: 'Step 4',
-          uiSchema: {},
+          uiSchema: {
+            father: {
+              'ui:title': 'Has your father recieved/earned a four-year degree?',
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'Yes',
+                  no: 'No'
+                }
+              }
+            },
+            fatherSchool: { 'ui:title': 'If yes, name of school' },
+            mother: {
+              'ui:title': 'Has your mother recieved/earned a four-year degree?',
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  yes: 'Yes',
+                  no: 'No'
+                }
+              }
+            },
+            motherSchool: {
+              'ui:title': 'If yes, name of school'
+            }
+          },
           schema: {
             type: 'object',
-            properties: {}
+            properties: {
+              father: {
+                type: 'string',
+                enum: ['yes', 'no']
+              },
+              fatherSchool: {
+                type: 'string'
+              },
+              mother: {
+                type: 'string',
+                enum: ['yes', 'no']
+              },
+              motherSchool: {
+                type: 'string'
+              }
+            }
+          }
+        },
+        fourSecondPage: {
+          path: 'step-4-page2',
+          title: 'Step 4',
+          uiSchema: {
+            parentSupport: {
+              'ui:title':
+                'Which parent did you regulary reside with and recieve support from during your childhood? (i.e., until you were 18 years old)?',
+              'ui:widget': 'radio',
+              'ui:options': {
+                labels: {
+                  mother: 'Mother',
+                  father: 'Father',
+                  both: 'Both Mother and Father',
+                  neither: 'Neither Mother not Father'
+                }
+              }
+            }
+          },
+          schema: {
+            type: 'object',
+            properties: {
+              parentSupport: {
+                type: 'string',
+                enum: ['mother', 'father', 'both', 'neither']
+              }
+            }
           }
         }
       }
@@ -380,10 +449,23 @@ const formConfig = {
         fivefirstPage: {
           path: 'step-5',
           title: 'Step 5',
-          uiSchema: {},
+          uiSchema: {
+            step5: {
+              'ui:title':
+                //Add age condition
+                'If you are at least 24 years old, ignore the questions in STEP 5 and skip ahead to STEP 6'
+            }
+          },
           schema: {
             type: 'object',
-            properties: {}
+            properties: {
+              step5: {
+                type: 'object',
+                properties: {
+                  collegeStatus: { type: 'string', enum: ['yes', 'no'] }
+                }
+              }
+            }
           }
         }
       }
