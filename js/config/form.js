@@ -310,7 +310,7 @@ const formConfig = {
               }
             },
             prNumber: {
-              'ui:title': 'Enter Permant Resident Alien Number'
+              'ui:title': 'Enter Permanent Resident Alien Number'
             },
             fosterCare: {
               'ui:title': 'Are you in foster care?',
