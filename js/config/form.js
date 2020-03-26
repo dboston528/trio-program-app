@@ -462,7 +462,12 @@ const formConfig = {
               step5: {
                 type: 'object',
                 properties: {
-                  collegeStatus: { type: 'string', enum: ['yes', 'no'] }
+                  collegeStatus: { type: 'string', enum: ['yes', 'no'] },
+                  maritalStatus: { type: 'string', enum: ['yes', 'no'] },
+                  childrenStatus: { type: 'string', enum: ['yes', 'no'] },
+                  dependantStatus: { type: 'string', enum: ['yes', 'no'] },
+                  parentStatus: { type: 'string', enum: ['yes', 'no'] },
+                  veteranStatus: { type: 'string', enum: ['yes', 'no'] }
                 }
               }
             }
