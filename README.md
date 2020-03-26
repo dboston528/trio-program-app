@@ -2,14 +2,6 @@
 The Trio application uses the US Forms System open source library and set of guiding principles for building complex web-based forms using React, the JSON Schema standard, and the US Web Design System.
 ## Reiqurements
 
-:book: [*US Forms System Documentation*](../README.md) :arrow_right: [*Getting Started with the US Forms System*](./README.md)
-
-# Tools for getting started with the US Forms System
-
-Building a form using the US Forms System requires some minimum front-end development tools, as well as general knowledge of those tools. Where possible, we'll provide links to information about getting started with these tools.
-
-### In this guide
-
 - [Command line interface (CLI)](#command-line-interface-cli)
 - [JavaScript](#javascript)
 - [Node.js and npm](#nodejs-and-npm)
