@@ -453,7 +453,73 @@ const formConfig = {
             step5: {
               'ui:title':
                 //Add age condition
-                'If you are at least 24 years old, ignore the questions in STEP 5 and skip ahead to STEP 6'
+                'If you are at least 24 years old, ignore the questions in STEP 5 and skip ahead to STEP 6',
+              collegeStatus: {
+                'ui:title':
+                  'Are you in college and working on a master’s or doctorate program (e.g., M.A., MBA, MD, JD, PhD, Ed.D? ',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  labels: {
+                    yes: 'Yes',
+                    no: 'No'
+                  }
+                }
+              },
+              maritalStatus: {
+                'ui:title':
+                  'Are you in college and working on a master’s or doctorate program (e.g., M.A., MBA, MD, JD, PhD, Ed.D? ',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  labels: {
+                    yes: 'Yes',
+                    no: 'No'
+                  }
+                }
+              },
+              childrenStatus: {
+                'ui:title':
+                  'Are you in college and working on a master’s or doctorate program (e.g., M.A., MBA, MD, JD, PhD, Ed.D? ',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  labels: {
+                    yes: 'Yes',
+                    no: 'No'
+                  }
+                }
+              },
+              dependantStatus: {
+                'ui:title':
+                  'Are you in college and working on a master’s or doctorate program (e.g., M.A., MBA, MD, JD, PhD, Ed.D? ',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  labels: {
+                    yes: 'Yes',
+                    no: 'No'
+                  }
+                }
+              },
+              parentStatus: {
+                'ui:title':
+                  'Are you in college and working on a master’s or doctorate program (e.g., M.A., MBA, MD, JD, PhD, Ed.D? ',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  labels: {
+                    yes: 'Yes',
+                    no: 'No'
+                  }
+                }
+              },
+              veteranStatus: {
+                'ui:title':
+                  'Are you in college and working on a master’s or doctorate program (e.g., M.A., MBA, MD, JD, PhD, Ed.D? ',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  labels: {
+                    yes: 'Yes',
+                    no: 'No'
+                  }
+                }
+              }
             }
           },
           schema: {
