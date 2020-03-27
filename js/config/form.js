@@ -1,6 +1,7 @@
 import Introduction from '../components/Introduction.jsx';
 import SSNWidget from 'us-forms-system/lib/js/widgets/SSNWidget';
 import { currencyConfig } from 'us-forms-system/lib/js/definitions/currency';
+import CurrencyWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
 const formConfig = {
   title: 'Trio Application',
   subTitle: 'Family Centered Educational Agency',
@@ -549,15 +550,41 @@ const formConfig = {
           path: 'step-6',
           title: 'Step 6',
           uiSchema: {
-            currency: currencyConfig.uiSchema('Currency'),
             step6: {
               'ui:title':
                 'You must answer the questions in STEP 6 if you are at least 24 years old or you answered YES to any of the questions in STEP 5.',
               familyTotal: {
                 'ui:title':
                   'What is the total number of persons in your family?'
+              },
+              taxIncome: {
+                // Need to figure out how to use thewidget below.
+                // 'ui:widget': CurrencyWidget
+                'ui:title':
+                  '  My family’s taxable (not total) income from the last calendar year was: '
+              },
+              didFileTaxes: {
+                'ui:title':
+                  'Did you file an income tax return in the last calendar year?',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  yes: 'Yes',
+                  no: 'no'
+                }
+              },
+              noTaxIncome: {
+                'ui:title':
+                  '  I attest that my family did not file a federal income tax return for the last calendar year. My family’s income was:'
+              },
+              didIncome: {
+                'ui:title':
+                  'Did you recieve an taxable income in the lat calendar year?',
+                'ui:widget': 'radio',
+                'ui:options': {
+                  yes: 'Yes',
+                  yes: 'Yes'
+                }
               }
-              // taxIncome: currencyConfig.uiSchema('Currency')
             }
           },
           schema: {
@@ -567,15 +594,13 @@ const formConfig = {
                 type: 'object',
                 properties: {
                   familyTotal: { type: 'string' },
-                  fedTax: { type: 'boolean' },
-                  // taxIncome: currencyConfig.schema(),
-                  noFedTax: { type: 'boolean' },
-                  noTaxIncome: { type: 'string' },
-                  noIncone: { type: 'boolean' }
+                  didIncome: { type: 'string', enum: ['yes', 'no'] },
+                  didFileTaxes: { type: 'string', enum: ['yes', 'no'] },
+                  taxIncome: { type: 'string' },
+                  noTaxIncome: { type: 'string' }
                 }
               }
-            },
-            currency: currencyConfig.schema()
+            }
           }
         }
       }
