@@ -1,5 +1,6 @@
 import Introduction from '../components/Introduction.jsx';
 import SSNWidget from 'us-forms-system/lib/js/widgets/SSNWidget';
+import { currencyConfig } from 'us-forms-system/lib/js/definitions/currency';
 const formConfig = {
   title: 'Trio Application',
   subTitle: 'Family Centered Educational Agency',
@@ -547,10 +548,34 @@ const formConfig = {
         sixfirstPage: {
           path: 'step-6',
           title: 'Step 6',
-          uiSchema: {},
+          uiSchema: {
+            currency: currencyConfig.uiSchema('Currency'),
+            step6: {
+              'ui:title':
+                'You must answer the questions in STEP 6 if you are at least 24 years old or you answered YES to any of the questions in STEP 5.',
+              familyTotal: {
+                'ui:title':
+                  'What is the total number of persons in your family?'
+              }
+              // taxIncome: currencyConfig.uiSchema('Currency')
+            }
+          },
           schema: {
             type: 'object',
-            properties: {}
+            properties: {
+              step6: {
+                type: 'object',
+                properties: {
+                  familyTotal: { type: 'string' },
+                  fedTax: { type: 'boolean' },
+                  // taxIncome: currencyConfig.schema(),
+                  noFedTax: { type: 'boolean' },
+                  noTaxIncome: { type: 'string' },
+                  noIncone: { type: 'boolean' }
+                }
+              }
+            },
+            currency: currencyConfig.schema()
           }
         }
       }
