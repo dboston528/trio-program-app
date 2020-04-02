@@ -2,6 +2,8 @@ import Introduction from '../components/Introduction.jsx';
 import SSNWidget from 'us-forms-system/lib/js/widgets/SSNWidget';
 import { currencyConfig } from 'us-forms-system/lib/js/definitions/currency';
 import CurrencyWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
+import { ssnConfig } from 'us-forms-system/lib/js/definitions/ssn';
+
 const formConfig = {
   title: 'Trio Application',
   subTitle: 'Family Centered Educational Agency',
