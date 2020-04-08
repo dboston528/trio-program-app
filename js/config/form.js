@@ -29,29 +29,29 @@ const formConfig = {
               'Last Name': { type: 'string' },
               'First Name': { type: 'string' },
               street: {
-                type: 'string'
+                type: 'string',
               },
               city: {
-                type: 'string'
+                type: 'string',
               },
               State: {
                 type: 'string',
-                enum: ['IL', 'TX']
+                enum: ['IL', 'TX'],
               },
               zip: {
                 type: 'string',
-                pattern: '^[0-9]{5,9}$'
-              }
-            }
+                pattern: '^[0-9]{5,9}$',
+              },
+            },
           },
           uiSchema: {
             street: {
-              'ui:title': 'Street'
+              'ui:title': 'Street',
             },
             city: {
-              'ui:title': 'City'
-            }
-          }
+              'ui:title': 'City',
+            },
+          },
         },
         secondPage: {
           path: 'step-1/second-page',
@@ -61,19 +61,19 @@ const formConfig = {
             type: 'object',
             properties: {
               'Student E-Mail': {
-                type: 'string'
+                type: 'string',
               },
               'Parent E-Mail': {
-                type: 'string'
+                type: 'string',
               },
               'Student Phone Number': {
-                type: 'string'
+                type: 'string',
               },
               'Parent Phone Number': {
-                type: 'string'
-              }
-            }
-          }
+                type: 'string',
+              },
+            },
+          },
         },
         thirdPage: {
           path: 'step-1/third-page',
@@ -84,19 +84,20 @@ const formConfig = {
               'ui:title': 'Social Security number',
               'ui:errorMessages': {
                 required: 'Please enter your SSN',
-                pattern: 'Please enter a valid 9 digit SSN (dashes not allowed)'
-              }
-            }
+                pattern:
+                  'Please enter a valid 9 digit SSN (dashes not allowed)',
+              },
+            },
           },
           schema: {
             type: 'object',
             required: ['ssn'],
             properties: {
               'School/College Currently Attending': {
-                type: 'string'
+                type: 'string',
               },
               'School Student ID# (if applicable)': {
-                type: 'string'
+                type: 'string',
               },
               Grade: {
                 type: 'string',
@@ -107,17 +108,17 @@ const formConfig = {
                   '9th Grade',
                   '10th Grade',
                   '11th Grade',
-                  '12th Grade'
-                ]
+                  '12th Grade',
+                ],
               },
               ssn: {
-                type: 'string'
+                type: 'string',
                 // pattern: '^[0-9]{9}$'
-              }
-            }
-          }
-        }
-      }
+              },
+            },
+          },
+        },
+      },
     },
     secondChapter: {
       title: 'Step 2',
@@ -130,28 +131,28 @@ const formConfig = {
               'ui:title':
                 'Are you White, Black or African-American, American Indian or Alaskan Native, Asian, Native Hawaiian or other Pacific Islander, or some other race?',
               hsp: {
-                'ui:title': 'Hispanic'
+                'ui:title': 'Hispanic',
               },
               blk: {
-                'ui:title': 'Black or African-American'
+                'ui:title': 'Black or African-American',
               },
               amia: {
-                'ui:title': 'American Indian or Alaskan Native'
+                'ui:title': 'American Indian or Alaskan Native',
               },
               wht: {
-                'ui:title': 'White'
+                'ui:title': 'White',
               },
               asn: {
-                'ui:title': 'Asian'
+                'ui:title': 'Asian',
               },
               nhp: {
-                'ui:title': 'Native Hawiian or other Pacific Islander'
+                'ui:title': 'Native Hawiian or other Pacific Islander',
               },
               //@TODO - condition here, if possible and form field to specify.
               sor: {
-                'ui:title': 'Some other Race (Please specify)'
-              }
-            }
+                'ui:title': 'Some other Race (Please specify)',
+              },
+            },
           },
           schema: {
             type: 'object',
@@ -165,11 +166,11 @@ const formConfig = {
                   wht: { type: 'boolean' },
                   asn: { type: 'boolean' },
                   nhp: { type: 'boolean' },
-                  sor: { type: 'boolean' }
-                }
-              }
-            }
-          }
+                  sor: { type: 'boolean' },
+                },
+              },
+            },
+          },
         },
         twoSecondPage: {
           path: 'step-2-page2',
@@ -180,23 +181,23 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   male: 'Male',
-                  female: 'Female'
-                }
-              }
-            }
+                  female: 'Female',
+                },
+              },
+            },
           },
           schema: {
             type: 'object',
             properties: {
               Gender: {
                 type: 'string',
-                enum: ['Male', 'Female']
+                enum: ['Male', 'Female'],
               },
               Birthdate: { type: 'string' },
               Age: { type: 'string' },
-              'Graduation Year': { type: 'string' }
-            }
-          }
+              'Graduation Year': { type: 'string' },
+            },
+          },
         },
         twoThirdPage: {
           path: 'step2-page3',
@@ -209,65 +210,65 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   yes: 'yes',
-                  no: 'no'
-                }
-              }
+                  no: 'no',
+                },
+              },
             },
             'Are you currently participating in any TRiO programs?': {
               'ui:widget': 'radio',
               'ui:options': {
                 labels: {
                   yes: 'yes',
-                  no: 'no'
-                }
-              }
+                  no: 'no',
+                },
+              },
             },
             'If you answered yes, please select the names of the program(s)': {
               'ui:widget': 'radio',
               'ui:options': {
                 labels: {
                   'upward bound': 'Upward Bound',
-                  '': 'no'
-                }
-              }
+                  '': 'no',
+                },
+              },
             },
             upwardBound: {
-              'ui:title': 'Upward Bound'
+              'ui:title': 'Upward Bound',
             },
             trioPrograms: {
               'ui:title':
                 'If you answered yes, please select the names of the program(s)',
               'ui:description': 'You may check more than one.',
               upwardBound: {
-                'ui:title': 'Upward Bound'
+                'ui:title': 'Upward Bound',
               },
               ubms: {
-                'ui:title': 'Upward Bound Math & Science'
+                'ui:title': 'Upward Bound Math & Science',
               },
               vub: {
-                'ui:title': 'Veterans Upward Bound'
+                'ui:title': 'Veterans Upward Bound',
               },
               eoc: {
-                'ui:title': 'Educational Oppurtunity Centers'
+                'ui:title': 'Educational Oppurtunity Centers',
               },
               gu: {
-                'ui:title': 'Gear UP'
+                'ui:title': 'Gear UP',
               },
               ts: {
-                'ui:title': 'Talent Search'
-              }
-            }
+                'ui:title': 'Talent Search',
+              },
+            },
           },
           schema: {
             type: 'object',
             properties: {
               iep: {
                 type: 'string',
-                enum: ['yes', 'no']
+                enum: ['yes', 'no'],
               },
               'Are you currently participating in any TRiO programs?': {
                 type: 'string',
-                enum: ['yes', 'no']
+                enum: ['yes', 'no'],
               },
               trioPrograms: {
                 type: 'object',
@@ -277,13 +278,13 @@ const formConfig = {
                   vub: { type: 'boolean' },
                   eoc: { type: 'boolean' },
                   gu: { type: 'boolean' },
-                  ts: { type: 'boolean' }
-                }
-              }
-            }
-          }
-        }
-      }
+                  ts: { type: 'boolean' },
+                },
+              },
+            },
+          },
+        },
+      },
     },
     thirdChapter: {
       title: 'Step 3',
@@ -298,9 +299,9 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   yes: 'Yes',
-                  no: 'No'
-                }
-              }
+                  no: 'No',
+                },
+              },
             },
             noUs: {
               'ui:title':
@@ -309,12 +310,12 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   yes: 'Yes',
-                  no: 'No'
-                }
-              }
+                  no: 'No',
+                },
+              },
             },
             prNumber: {
-              'ui:title': 'Enter Permanent Resident Alien Number'
+              'ui:title': 'Enter Permanent Resident Alien Number',
             },
             fosterCare: {
               'ui:title': 'Are you in foster care?',
@@ -322,9 +323,9 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   yes: 'Yes',
-                  no: 'No'
-                }
-              }
+                  no: 'No',
+                },
+              },
             },
             homeless: {
               'ui:title': 'Are you homeless',
@@ -332,37 +333,37 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   yes: 'Yes',
-                  no: 'No'
-                }
-              }
-            }
+                  no: 'No',
+                },
+              },
+            },
           },
           schema: {
             type: 'object',
             properties: {
               usCitizen: {
                 type: 'string',
-                enum: ['yes', 'no']
+                enum: ['yes', 'no'],
               },
               noUs: {
                 type: 'string',
-                enum: ['yes', 'no']
+                enum: ['yes', 'no'],
               },
               prNumber: {
-                type: 'string'
+                type: 'string',
               },
               fosterCare: {
                 type: 'string',
-                enum: ['yes', 'no']
+                enum: ['yes', 'no'],
               },
               homeless: {
                 type: 'string',
-                enum: ['yes', 'no']
-              }
-            }
-          }
-        }
-      }
+                enum: ['yes', 'no'],
+              },
+            },
+          },
+        },
+      },
     },
     //Make dynamcic & add conditional logic
     fourthChapter: {
@@ -378,9 +379,9 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   yes: 'Yes',
-                  no: 'No'
-                }
-              }
+                  no: 'No',
+                },
+              },
             },
             fatherSchool: { 'ui:title': 'If yes, name of school' },
             mother: {
@@ -389,33 +390,33 @@ const formConfig = {
               'ui:options': {
                 labels: {
                   yes: 'Yes',
-                  no: 'No'
-                }
-              }
+                  no: 'No',
+                },
+              },
             },
             motherSchool: {
-              'ui:title': 'If yes, name of school'
-            }
+              'ui:title': 'If yes, name of school',
+            },
           },
           schema: {
             type: 'object',
             properties: {
               father: {
                 type: 'string',
-                enum: ['yes', 'no']
+                enum: ['yes', 'no'],
               },
               fatherSchool: {
-                type: 'string'
+                type: 'string',
               },
               mother: {
                 type: 'string',
-                enum: ['yes', 'no']
+                enum: ['yes', 'no'],
               },
               motherSchool: {
-                type: 'string'
-              }
-            }
-          }
+                type: 'string',
+              },
+            },
+          },
         },
         fourSecondPage: {
           path: 'step-4-page2',
@@ -430,22 +431,22 @@ const formConfig = {
                   mother: 'Mother',
                   father: 'Father',
                   both: 'Both Mother and Father',
-                  neither: 'Neither Mother not Father'
-                }
-              }
-            }
+                  neither: 'Neither Mother not Father',
+                },
+              },
+            },
           },
           schema: {
             type: 'object',
             properties: {
               parentSupport: {
                 type: 'string',
-                enum: ['mother', 'father', 'both', 'neither']
-              }
-            }
-          }
-        }
-      }
+                enum: ['mother', 'father', 'both', 'neither'],
+              },
+            },
+          },
+        },
+      },
     },
     fifthChapter: {
       title: 'Step 5',
@@ -465,9 +466,9 @@ const formConfig = {
                 'ui:options': {
                   labels: {
                     yes: 'Yes',
-                    no: 'No'
-                  }
-                }
+                    no: 'No',
+                  },
+                },
               },
               maritalStatus: {
                 'ui:title':
@@ -476,9 +477,9 @@ const formConfig = {
                 'ui:options': {
                   labels: {
                     yes: 'Yes',
-                    no: 'No'
-                  }
-                }
+                    no: 'No',
+                  },
+                },
               },
               childrenStatus: {
                 'ui:title':
@@ -487,9 +488,9 @@ const formConfig = {
                 'ui:options': {
                   labels: {
                     yes: 'Yes',
-                    no: 'No'
-                  }
-                }
+                    no: 'No',
+                  },
+                },
               },
               dependantStatus: {
                 'ui:title':
@@ -498,9 +499,9 @@ const formConfig = {
                 'ui:options': {
                   labels: {
                     yes: 'Yes',
-                    no: 'No'
-                  }
-                }
+                    no: 'No',
+                  },
+                },
               },
               parentStatus: {
                 'ui:title':
@@ -509,9 +510,9 @@ const formConfig = {
                 'ui:options': {
                   labels: {
                     yes: 'Yes',
-                    no: 'No'
-                  }
-                }
+                    no: 'No',
+                  },
+                },
               },
               veteranStatus: {
                 'ui:title':
@@ -520,11 +521,11 @@ const formConfig = {
                 'ui:options': {
                   labels: {
                     yes: 'Yes',
-                    no: 'No'
-                  }
-                }
-              }
-            }
+                    no: 'No',
+                  },
+                },
+              },
+            },
           },
           schema: {
             type: 'object',
@@ -537,13 +538,13 @@ const formConfig = {
                   childrenStatus: { type: 'string', enum: ['yes', 'no'] },
                   dependantStatus: { type: 'string', enum: ['yes', 'no'] },
                   parentStatus: { type: 'string', enum: ['yes', 'no'] },
-                  veteranStatus: { type: 'string', enum: ['yes', 'no'] }
-                }
-              }
-            }
-          }
-        }
-      }
+                  veteranStatus: { type: 'string', enum: ['yes', 'no'] },
+                },
+              },
+            },
+          },
+        },
+      },
     },
     sixthChapter: {
       title: 'Step 6',
@@ -557,13 +558,13 @@ const formConfig = {
                 'You must answer the questions in STEP 6 if you are at least 24 years old or you answered YES to any of the questions in STEP 5.',
               familyTotal: {
                 'ui:title':
-                  'What is the total number of persons in your family?'
+                  'What is the total number of persons in your family?',
               },
               taxIncome: {
                 // Need to figure out how to use thewidget below.
                 // 'ui:widget': CurrencyWidget
                 'ui:title':
-                  '  My family’s taxable (not total) income from the last calendar year was: '
+                  '  My family’s taxable (not total) income from the last calendar year was: ',
               },
               didFileTaxes: {
                 'ui:title':
@@ -571,12 +572,12 @@ const formConfig = {
                 'ui:widget': 'radio',
                 'ui:options': {
                   yes: 'Yes',
-                  no: 'no'
-                }
+                  no: 'no',
+                },
               },
               noTaxIncome: {
                 'ui:title':
-                  '  I attest that my family did not file a federal income tax return for the last calendar year. My family’s income was:'
+                  '  I attest that my family did not file a federal income tax return for the last calendar year. My family’s income was:',
               },
               didIncome: {
                 'ui:title':
@@ -584,10 +585,10 @@ const formConfig = {
                 'ui:widget': 'radio',
                 'ui:options': {
                   yes: 'Yes',
-                  yes: 'Yes'
-                }
-              }
-            }
+                  yes: 'Yes',
+                },
+              },
+            },
           },
           schema: {
             type: 'object',
@@ -599,13 +600,13 @@ const formConfig = {
                   didIncome: { type: 'string', enum: ['yes', 'no'] },
                   didFileTaxes: { type: 'string', enum: ['yes', 'no'] },
                   taxIncome: { type: 'string' },
-                  noTaxIncome: { type: 'string' }
-                }
-              }
-            }
-          }
-        }
-      }
+                  noTaxIncome: { type: 'string' },
+                },
+              },
+            },
+          },
+        },
+      },
     },
     seventhChapter: {
       title: 'Step 7',
@@ -613,15 +614,31 @@ const formConfig = {
         sevenfirstPage: {
           path: 'step-7',
           title: 'Step 7',
-          uiSchema: {},
+          uiSchema: {
+            'view: textObject': {
+              'ui:description':
+                'By signing this application, you attest that all the information on this application is true.  Moreover, you authorize the release of official school records to The Family Centered Educational Agency, understanding that the information in these records will be used only to assess the student’s need for program services, discern his/her educational progress, evaluate the effectiveness of program activities, and fulfill program reporting requirements. Also I authorize for any pictures/videos taken in connection with the activities of the FCEA TRiO Programs (Upward Bound and Talent Search) to be used in publications. (i.e., newsletters, television, websites, presentations, magazines articles etc.)  ',
+            },
+            studentSignature: {
+              'ui:title': 'Student’s/Participant’s Signature',
+            },
+            parentSignature: {
+              'ui:title': 'Parent/Guardian’s Signature',
+            },
+          },
           schema: {
             type: 'object',
-            properties: {}
-          }
-        }
-      }
-    }
-  }
+            properties: {
+              'view: textObject': { type: 'object', properties: {} },
+              studentSignature: { type: 'string' },
+              parentSignature: { type: 'string' },
+              signatureDate: { type: 'string' },
+            },
+          },
+        },
+      },
+    },
+  },
 };
 
 export default formConfig;
