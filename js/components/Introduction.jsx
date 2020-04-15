@@ -19,6 +19,17 @@ class Introduction extends React.Component {
     return (
       <div className="schemaform-intro">
         <FormTitle title="Welcome to The Trio Programs Application" />
+        <h2>Please provide the following with your completed application: </h2>
+        <ol>
+          <li>Current Report Card/Transcript</li>
+          <li>Recent State Test Results (ISAT, PLAN, EXPLORE)</li>
+          <li>
+            Signed IRS 1040 forms or signed request for Transcript of Tax Return
+            Form (4506-T)
+          </li>
+          <li>School Attendance Record</li>
+          <li>Power School/CPS Login Information (if applicable)</li>
+        </ol>
         <p>Get started on the application!</p>
         <ProgressButton
           onButtonClick={this.startForm}
@@ -33,7 +44,7 @@ class Introduction extends React.Component {
 
 Introduction.propTypes = {
   route: PropTypes.object,
-  router: PropTypes.object
+  router: PropTypes.object,
 };
 
 export default Introduction;
