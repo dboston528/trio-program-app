@@ -1,5 +1,6 @@
 import Introduction from '../components/Introduction.jsx';
 import SSNWidget from 'us-forms-system/lib/js/widgets/SSNWidget';
+import EmailWidget from 'us-forms-system/lib/js/widgets/EmailWidget';
 import { currencyConfig } from 'us-forms-system/lib/js/definitions/currency';
 import CurrencyWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
 import { ssnConfig } from 'us-forms-system/lib/js/definitions/ssn';
@@ -56,14 +57,23 @@ const formConfig = {
         secondPage: {
           path: 'step-1/second-page',
           title: 'Second Page',
-          uiSchema: {},
+          uiSchema: {
+            studentEmail: {
+              'ui:widget': EmailWidget,
+              'ui:title': 'Student E-mail',
+            },
+            parentEmail: {
+              'ui:widget': EmailWidget,
+              'ui:title': 'Parent E-mail',
+            },
+          },
           schema: {
             type: 'object',
             properties: {
-              'Student E-Mail': {
+              studentEmail: {
                 type: 'string',
               },
-              'Parent E-Mail': {
+              parentEmail: {
                 type: 'string',
               },
               'Student Phone Number': {
