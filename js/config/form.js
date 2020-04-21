@@ -119,18 +119,21 @@ const formConfig = {
                   'Please enter a valid 9 digit SSN (dashes not allowed)',
               },
             },
+            school: { 'ui:title': 'School/College Currently Attending' },
+            studentID: { 'ui:title': 'School Student ID# (if applicable)' },
+            grade: { 'ui:title': 'Grade' },
           },
           schema: {
             type: 'object',
             required: ['ssn'],
             properties: {
-              'School/College Currently Attending': {
+              school: {
                 type: 'string',
               },
-              'School Student ID# (if applicable)': {
+              studentID: {
                 type: 'string',
               },
-              Grade: {
+              grade: {
                 type: 'string',
                 enum: [
                   '6th Grade',
