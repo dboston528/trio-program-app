@@ -1,6 +1,8 @@
 import Introduction from '../components/Introduction.jsx';
 import SSNWidget from 'us-forms-system/lib/js/widgets/SSNWidget';
 import EmailWidget from 'us-forms-system/lib/js/widgets/EmailWidget';
+import PhoneNumberWidget from 'us-forms-system/lib/js/widgets/PhoneNumberWidget';
+
 import { currencyConfig } from 'us-forms-system/lib/js/definitions/currency';
 import CurrencyWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
 import { ssnConfig } from 'us-forms-system/lib/js/definitions/ssn';
@@ -77,6 +79,14 @@ const formConfig = {
               'ui:widget': EmailWidget,
               'ui:title': 'Parent E-mail',
             },
+            StudentPhoneNumber: {
+              'ui:widget': PhoneNumberWidget,
+              'ui:title': 'Student Phone Number',
+            },
+            ParentPhoneNumber: {
+              'ui:widget': PhoneNumberWidget,
+              'ui:title': 'Parent Phone Number',
+            },
           },
           schema: {
             type: 'object',
@@ -87,10 +97,10 @@ const formConfig = {
               parentEmail: {
                 type: 'string',
               },
-              'Student Phone Number': {
+              StudentPhoneNumber: {
                 type: 'string',
               },
-              'Parent Phone Number': {
+              ParentPhoneNumber: {
                 type: 'string',
               },
             },
@@ -169,7 +179,7 @@ const formConfig = {
               nhp: {
                 'ui:title': 'Native Hawiian or other Pacific Islander',
               },
-              //@TODO - condition here, if possible and form field to specify.
+              //@TODO - put  condition here if possible and form field to specify.
               sor: {
                 'ui:title': 'Some other Race (Please specify)',
               },
