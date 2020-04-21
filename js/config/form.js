@@ -23,23 +23,22 @@ const formConfig = {
         firstPage: {
           path: 'step-1',
           title: 'Step 1',
-          uiSchema: {},
           schema: {
             type: 'object',
             properties: {
-              'Last Name': { type: 'string' },
-              'First Name': { type: 'string' },
+              lastName: { type: 'string' },
+              firstName: { type: 'string' },
               street: {
                 type: 'string',
               },
               city: {
                 type: 'string',
               },
-              State: {
+              state: {
                 type: 'string',
                 enum: ['IL', 'TX'],
               },
-              zip: {
+              zipCode: {
                 type: 'string',
                 pattern: '^[0-9]{5,9}$',
               },
@@ -51,6 +50,18 @@ const formConfig = {
             },
             city: {
               'ui:title': 'City',
+            },
+            lastName: {
+              'ui:title': 'Last Name',
+            },
+            firstName: {
+              'ui:title': 'First Name',
+            },
+            state: {
+              'ui:title': 'State',
+            },
+            zipCode: {
+              'ui:title': 'Zip Code',
             },
           },
         },
