@@ -114,7 +114,6 @@ const formConfig = {
               'ui:widget': SSNWidget,
               'ui:title': 'Social Security number',
               'ui:errorMessages': {
-                required: 'Please enter your SSN',
                 pattern:
                   'Please enter a valid 9 digit SSN (dashes not allowed)',
               },
@@ -147,7 +146,6 @@ const formConfig = {
               },
               ssn: {
                 type: 'string',
-                // pattern: '^[0-9]{9}$'
               },
             },
           },
