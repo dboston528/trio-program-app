@@ -184,6 +184,13 @@ const formConfig = {
               sor: {
                 'ui:title': 'Some other Race (Please specify)',
               },
+              raceType: {
+                'ui:title': 'Please Specify',
+                'ui:options': {
+                  expandUnder: 'sor',
+                  expandUnderCondition: true,
+                },
+              },
             },
           },
           schema: {
@@ -199,6 +206,7 @@ const formConfig = {
                   asn: { type: 'boolean' },
                   nhp: { type: 'boolean' },
                   sor: { type: 'boolean' },
+                  raceType: { type: 'string' },
                 },
               },
             },
