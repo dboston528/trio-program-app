@@ -3,10 +3,6 @@ import SSNWidget from 'us-forms-system/lib/js/widgets/SSNWidget';
 import EmailWidget from 'us-forms-system/lib/js/widgets/EmailWidget';
 import PhoneNumberWidget from 'us-forms-system/lib/js/widgets/PhoneNumberWidget';
 
-import { currencyConfig } from 'us-forms-system/lib/js/definitions/currency';
-import CurrencyWidget from 'us-forms-system/lib/js/widgets/CurrencyWidget';
-import { ssnConfig } from 'us-forms-system/lib/js/definitions/ssn';
-
 const formConfig = {
   title: 'Trio Application',
   subTitle: 'Family Centered Educational Agency',
@@ -14,7 +10,7 @@ const formConfig = {
   urlPrefix: '/',
   trackingPrefix: 'form-',
   transformForSubmit: '',
-  submitUrl: 'mongodb://localhost:27017/trio',
+  submitUrl: '',
   introduction: Introduction,
   confirmation: 'Thanks for submitting the application',
   defaultDefinitions: {},
@@ -30,7 +26,7 @@ const formConfig = {
             properties: {
               lastName: { type: 'string' },
               firstName: { type: 'string' },
-              street: {
+              streetAddress: {
                 type: 'string',
               },
               city: {
@@ -47,8 +43,8 @@ const formConfig = {
             },
           },
           uiSchema: {
-            street: {
-              'ui:title': 'Street',
+            streetAddress: {
+              'ui:title': 'Street Address',
             },
             city: {
               'ui:title': 'City',
